@@ -21,7 +21,7 @@ def get_weather(city):
 # Function to fetch real-time events from Eventbrite
 def get_real_time_events(state):
     EVENTBRITE_API_KEY = "OV2PT6EZSUWH6KKEG6F2"
-    url = f"https://www.eventbriteapi.com/v3/events/search/?q={state}&location.address={state}&token={EVENTBRITE_API_KEY}"
+    url = f"https://www.eventbriteapi.com/v3/events/search/?location.address={state}&location.within=100km&token={EVENTBRITE_API_KEY}"
     response = requests.get(url).json()
     
     events = []
