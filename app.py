@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Function to fetch weather data
 def get_weather(city):
-    API_KEY = "your_openweathermap_api_key"
+    API_KEY = "f8cb952227a9226d7088520604acec5a"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
     response = requests.get(url).json()
     
@@ -20,7 +20,7 @@ def get_weather(city):
 
 # Function to fetch real-time events from Eventbrite
 def get_real_time_events(state):
-    EVENTBRITE_API_KEY = "your_eventbrite_api_key"
+    EVENTBRITE_API_KEY = "OV2PT6EZSUWH6KKEG6F2"
     url = f"https://www.eventbriteapi.com/v3/events/search/?q={state}&location.address={state}&token={EVENTBRITE_API_KEY}"
     response = requests.get(url).json()
     
